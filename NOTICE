@@ -1,0 +1,18 @@
+TapBack
+Copyright (c) 2026 Aarav Sekhri
+
+TapBack's own source code is licensed under the MIT License (see LICENSE).
+
+This project includes third-party material that is not covered by the MIT
+License:
+
+Schibsted Grotesk typeface
+  File:      app/src/main/res/font/schibsted_grotesk.ttf
+  Copyright: Copyright 2023 The Schibsted-Grotesk Project Authors
+             (https://github.com/schibsted/schibsted-grotesk)
+  License:   SIL Open Font License, Version 1.1
+             Full text: third_party/SchibstedGrotesk-OFL.txt
+
+Libraries resolved at build time by Gradle and pip (for example AndroidX,
+Jetpack Compose, the RevenueCat SDK, FastAPI and the Google Gen AI SDK) are
+not included in this repository and remain under their own licenses.

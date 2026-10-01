@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      A debug build talks to a planning service on the developer's own machine.
+      The release manifest grants no cleartext permission at all, so this can
+      only ever apply to a build made for development.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+      Android 17 lets an app that targets it reach a private address — the
+      emulator's 10.0.2.2, a computer on the local network — only with this
+      permission; without it the connection just times out. A debug build
+      talks to a planning service there, so it asks. The release manifest does
+      not: a release build talks to a public HTTPS address.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK" />
+
+    <!--
+      Only so the debug test screen below can raise Android's real location
+      prompt, to check how the guide handles a system permission dialog. The
+      release manifest declares no location permission, and nothing in the app
+      reads location.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--
+      Debug-only additions: the tracking benchmark's fixture and its remote
+      control. Neither is declared in the release manifest, so neither exists
+      in a release package and nothing in the shipped app can start them.
+    -->
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="android:networkSecurityConfig">
+
+        <!--
+          Its own process on purpose. In the app's own process the accessibility
+          framework can answer a refresh without a real round trip, and the
+          benchmark would be measuring something no real screen does.
+        -->
+        <activity
+            android:name="com.aaravsekhri.dot.experiment.FixtureScrollActivity"
+            android:exported="true"
+            android:label="Dot fixture"
+            android:process=":fixture"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+
+        <activity
+            android:name=".experiment.FixtureSignInActivity"
+            android:exported="true"
+            android:taskAffinity="com.aaravsekhri.dot.fixture"
+            android:label="Example sign-in (test)" />
+
+        <activity
+            android:name=".experiment.FixtureAppsActivity"
+            android:exported="true"
+            android:taskAffinity="com.aaravsekhri.dot.fixture.apps"
+            android:windowSoftInputMode="adjustResize"
+            android:label="Example Social (test)" />
+
+        <activity
+            android:name=".experiment.FixtureFormActivity"
+            android:exported="true"
+            android:taskAffinity="com.aaravsekhri.dot.fixture.forms"
+            android:windowSoftInputMode="adjustResize"
+            android:label="Example Store (test)" />
+
+        <receiver
+            android:name="com.aaravsekhri.dot.experiment.FollowProbeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.aaravsekhri.dot.FOLLOW_START" />
+                <action android:name="com.aaravsekhri.dot.FOLLOW_STOP" />
+                <action android:name="com.aaravsekhri.dot.FOLLOW_DUMP" />
+                <action android:name="com.aaravsekhri.dot.GUIDE_FIXTURE" />
+                <action android:name="com.aaravsekhri.dot.GUIDE_STOP" />
+                <action android:name="com.aaravsekhri.dot.GUIDE_REAL" />
+                <action android:name="com.aaravsekhri.dot.DRAW_RESET" />
+                <action android:name="com.aaravsekhri.dot.DRAW_DUMP" />
+                <action android:name="com.aaravsekhri.dot.OBSERVE_PROBE" />
+                <action android:name="com.aaravsekhri.dot.GESTURE_CARD" />
+                <action android:name="com.aaravsekhri.dot.POINT_AT" />
+                <action android:name="com.aaravsekhri.dot.START_GOAL" />
+                <action android:name="com.aaravsekhri.dot.TUNING" />
+                <action android:name="com.aaravsekhri.dot.MANUAL" />
+                <action android:name="com.aaravsekhri.dot.END_AI" />
+                <action android:name="com.aaravsekhri.dot.WINDOWS" />
+                <action android:name="com.aaravsekhri.dot.START_LESSON" />
+                <action android:name="com.aaravsekhri.dot.FIXTURE_LESSON" />
+                <action android:name="com.aaravsekhri.dot.CARD" />
+                <action android:name="com.aaravsekhri.dot.ASK" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

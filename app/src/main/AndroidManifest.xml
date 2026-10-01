@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      No screen-capture permissions.
+
+      An earlier build asked for FOREGROUND_SERVICE_MEDIA_PROJECTION so an
+      experimental tracker could watch the screen and keep the highlight
+      aligned while scrolling. Manual testing found that tracker unfit to use,
+      and the code is now unreachable research, so the permissions that would
+      have supported it are gone too. An app that never captures the screen
+      should not be asking for the ability.
+
+      SYSTEM_ALERT_WINDOW is deliberately still absent: Dot's overlays are
+      accessibility overlays and need no such permission.
+    -->
+
+    <!--
+      The internet permission is declared here because a general, AI-guided
+      session asks a planning service for its next step. The fixed tutorials
+      use it for nothing: they run entirely on the device, and a build with no
+      planning service configured never opens a socket.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+      Whether the phone is online at all, so a failed request can say "your
+      phone is offline" or "Dot's service isn't answering" truthfully. A
+      normal permission: granted at install, nothing asked, no network named.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+      Which app is the Home screen, so the general guide can tell "on the Home
+      screen" from "in an app"; and the apps Dot's courses teach, plus the
+      Play Store, so a lesson can know whether its app is already installed and
+      skip a prerequisite that is already met. Named packages only: not
+      QUERY_ALL_PACKAGES and no wider look at what is installed. For any other
+      app, whether it is installed is established from what is on screen — the
+      launcher's own search, the Play Store page — and a lookup Android hides
+      is never read as "not installed". Keep in step with
+      com.aaravsekhri.dot.guide.apps.InstalledApps.declared.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.HOME" />
+        </intent>
+        <package android:name="com.openai.chatgpt" />
+        <package android:name="com.anthropic.claude" />
+        <package android:name="com.google.android.apps.bard" />
+        <package android:name="ai.perplexity.app.android" />
+        <package android:name="com.whatsapp" />
+        <package android:name="com.facebook.katana" />
+        <package android:name="com.google.android.apps.photos" />
+        <package android:name="com.google.android.apps.maps" />
+        <package android:name="com.google.android.gm" />
+        <package android:name="com.google.android.youtube" />
+        <package android:name="com.google.android.calendar" />
+        <package android:name="com.android.chrome" />
+        <package android:name="com.google.android.apps.messaging" />
+        <package android:name="com.android.vending" />
+        <package android:name="com.google.android.deskclock" />
+        <package android:name="com.google.android.keep" />
+        <package android:name="com.google.android.apps.nbu.files" />
+        <package android:name="com.google.android.apps.tachyon" />
+        <package android:name="com.google.android.apps.translate" />
+        <package android:name="com.google.android.contacts" />
+        <package android:name="com.google.android.dialer" />
+        <package android:name="com.spotify.music" />
+        <package android:name="com.google.android.googlequicksearchbox" />
+        <package android:name="com.google.android.apps.docs" />
+        <package android:name="com.android.settings" />
+        <package android:name="com.adobe.lrmobile" />
+        <package android:name="com.canva.editor" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dot">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Dot"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          Dot's guide service. Bound by the system only, and only after the
+          person turns it on in Accessibility settings themselves.
+        -->
+        <service
+            android:name=".guide.service.DotAccessibilityService"
+            android:exported="true"
+            android:label="@string/accessibility_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!--
+          The screen-capture consent activity and its foreground service are
+          deliberately not declared. Their source is kept in `guide.visual` as
+          research, and without these declarations the system cannot start
+          either of them: an ordinary guide provably runs no capture.
+        -->
+    </application>
+
+</manifest>

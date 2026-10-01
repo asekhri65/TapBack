@@ -1,0 +1,34 @@
+Last updated: September 30, 2026
+
+These terms cover your use of TapBack, the Android app, and the service it uses to plan guidance. By using TapBack, you agree to them.
+
+## What TapBack does
+TapBack shows you, one step at a time, where to tap to get something done on your phone. Pebble points; you tap. TapBack never taps, types or scrolls for you, and you decide whether to follow each step.
+
+## Guidance can be wrong
+Steps come partly from an AI model, and apps change. A step may be out of date or mistaken. Check before you confirm anything that sends, buys, deletes or changes something important. Don’t rely on TapBack in an emergency, or for medical, legal or financial decisions.
+
+## Free help and TapBack Plus
+- Free: 2 guided tasks to try TapBack, and the whole Google Maps course. Free guided tasks don’t come back each week.
+- TapBack Plus: 10 guided tasks each subscription week and every step-by-step course, while your subscription is active. Unused tasks don’t carry over to the next week.
+- A task is one thing you ask for, with its steps and follow-up help to finish it. Trying again or carrying on with the same task doesn’t use another. If TapBack couldn’t help at all, the task is given back.
+- These amounts can change. The current ones are always shown in the app before you buy.
+
+## Subscriptions
+- TapBack Plus is sold through Google Play, at the price and for the period shown before you buy. It renews automatically until you cancel.
+- You can cancel anytime in Google Play. TapBack Plus stays on until the end of the period you’ve paid for.
+- Refunds are handled under Google Play’s refund policies.
+- If you buy on a new phone or reinstall TapBack, use Restore purchases to bring TapBack Plus back.
+
+## Using TapBack fairly
+Don’t use TapBack to break the law, to get into accounts or devices that aren’t yours, or to interfere with TapBack’s service, for example by automating requests or sharing your install’s key.
+
+## Availability and changes
+TapBack’s service may sometimes be unavailable, and features may change. If TapBack Plus is ever withdrawn, renewals will stop.
+If these terms change, the new version will be in the app with a new date. Using TapBack after that means you accept the new terms.
+
+## Responsibility
+TapBack is provided as it is. As far as the law allows, TapBack isn’t responsible for losses that come from following, or not following, a step. Nothing in these terms takes away rights you have under consumer law that can’t be limited.
+
+## Contact
+Use the developer contact details on TapBack’s Google Play listing.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Debug builds only. This file does not exist in a release package, so a
+  shipped Dot has no permission to speak cleartext to anything.
+
+  The one exception below is the address an Android emulator uses to reach the
+  development machine it is running on. It exists so a developer can run the
+  planning service on their own laptop without putting a certificate on it.
+  Nothing else is permitted, and nothing outside the emulator can use it.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- The host machine, as seen from inside the emulator. -->
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Debug fixture only. Gives the benchmark target a stable view id so it
+         can be reacquired by identity rather than by position. -->
+    <item name="dot_fixture_target" type="id" />
+    <item name="dot_fixture_list" type="id" />
+</resources>

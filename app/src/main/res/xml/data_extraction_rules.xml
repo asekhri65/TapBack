@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  What may leave the device with a backup or a device transfer.
+
+  Dot's session checkpoint is excluded from both. It holds what somebody typed
+  about their own phone — "help me make the text bigger", "why can't I hear my
+  alarms" — and a sentence about how far they got. That is a note about a
+  person's difficulties with their device, and it has no business travelling to
+  a new phone or into a cloud backup because they happened not to finish.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="dot_ai_session.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="dot_ai_session.xml" />
+    </device-transfer>
+</data-extraction-rules>

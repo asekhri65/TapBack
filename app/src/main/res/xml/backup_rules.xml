@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The same exclusion for devices before API 31, which use this file instead.
+  See data_extraction_rules.xml for why.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="dot_ai_session.xml" />
+</full-backup-content>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Dot's accessibility service configuration.
+
+  Every event type and flag below is here because the guide cannot work
+  without it. Nothing is requested "just in case".
+
+  notificationTimeout is 0, not a throttle. Scroll events drive the overlay's
+  motion, and the framework coalescing them to one every 100ms was what made
+  the outline move in visible steps. Dot does its own coalescing instead: scroll
+  deltas accumulate and are applied once per display frame, and content-changed
+  bursts are collapsed into a single rescan.
+
+  canTakeScreenshot is declared for the general, AI-guided sessions: a single
+  frame of a settled screen, taken occasionally so the service being asked for
+  the next step can see what the accessibility tree does not describe well —
+  an icon with no label, a slider's position, a photograph. It is not screen
+  recording: one frame per decision, dropped as soon as the request is built,
+  never written to disk. The platform refuses outright on windows an app has
+  marked secure, and Dot treats that refusal as the app saying its screen is
+  private and stops reading it too. The fixed tutorials take none.
+
+  typeWindowsChanged is deliberately absent: it fires for every window on
+  the device, including Dot's own overlays, which would turn showing a cue
+  into an endless add/remove loop.
+
+  Deliberately absent:
+    canPerformGestures      - Dot never taps or swipes for the person.
+    isAccessibilityTool     - not claimed at this stage; the in-app
+                              disclosure covers what Dot does instead.
+    packageNames            - unrestricted so Dot can notice when the person
+                              leaves Settings and offer to take them back.
+                              Screen content is only ever read while a guide
+                              is running and the foreground app is one the
+                              current step expects; see DotAccessibilityService.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeViewClicked|typeViewSelected|typeViewScrolled|typeViewTextChanged|typeViewFocused|typeWindowStateChanged|typeWindowContentChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds|flagRetrieveInteractiveWindows"
+    android:canRetrieveWindowContent="true"
+    android:canTakeScreenshot="true"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="0"
+    android:settingsActivity="com.aaravsekhri.dot.MainActivity"
+    android:summary="@string/accessibility_service_summary" />

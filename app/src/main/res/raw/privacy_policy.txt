@@ -1,0 +1,50 @@
+Last updated: September 29, 2026
+
+This policy explains what TapBack collects, why, and what happens to it. TapBack is a guide for Android: Pebble shows you where to tap, one step at a time. TapBack never taps, types or scrolls for you.
+
+## What stays on your phone
+- Your course progress, your place in an unfinished guide, and your settings.
+- A random identifier made for this install, and a key that proves requests come from it. They are not linked to your name, email address, phone number or Google account.
+Uninstalling TapBack, or clearing its storage in Android Settings, removes all of this from your phone.
+
+## What TapBack reads on your screen
+TapBack uses Android’s accessibility access only while a guide or a lesson is running. It reads the text, names and positions of what is on the screen, so Pebble can point at the right place.
+On screens that ask for a password, a security code or payment details, TapBack stops reading and sends nothing. It never keeps what you type there.
+
+## What is sent to TapBack’s service
+When TapBack needs its service to work out the next step, it sends:
+- What you asked for, in your words.
+- What is on your screen: the words and positions of buttons and text, and sometimes a picture of the screen.
+- Which steps have already happened in this task.
+TapBack’s service uses this to work out the next step and does not keep it. Before anything from your screen is sent for the first time, TapBack asks you.
+To count your tasks, the service keeps a record for this install: when it was created, and for each task its identifier, whether it was a request or a lesson, which course, which allowance it used, when it started, whether it finished, and how many steps were planned. These records hold nothing from your screen and nothing you typed.
+
+## Google Gemini
+To work out each step, TapBack’s service passes what it received to Google’s Gemini API. Google handles it under the Gemini API terms and Google’s Privacy Policy.
+
+## Purchases
+TapBack Plus is sold through Google Play and managed with RevenueCat. Google Play handles your payment details; TapBack never sees them. RevenueCat receives the purchase record with this install’s random identifier, and TapBack’s service asks RevenueCat whether TapBack Plus is active.
+
+## Internet addresses
+TapBack’s service sees the internet address each request comes from. It uses it to limit misuse, such as too many new installs from one address in an hour, and does not add it to your records. The computers that run the service may keep short-lived technical logs.
+
+## What TapBack doesn’t do
+- No advertising, and no advertising or analytics trackers.
+- It doesn’t sell your information or share it for advertising.
+- It doesn’t use your microphone or record your screen as video.
+- It never taps, types or scrolls for you.
+
+## Your choices
+- Turn guidance off at any time: Android Settings › Accessibility › TapBack.
+- Stop TapBack sending your screen for help: TapBack › Settings.
+- Pause any guide from Pebble’s card.
+- Ask questions about your information, or ask for the service’s records for your install to be deleted, using the contact details below.
+
+## Children
+TapBack isn’t meant for children under 13.
+
+## Changes
+If this policy changes, the new version will be in the app with a new date.
+
+## Contact
+Use the developer contact details on TapBack’s Google Play listing.

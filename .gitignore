@@ -1,0 +1,33 @@
+# ---- Secrets and local configuration (never commit) ----
+local.properties
+backend/.env
+.env
+*.keystore
+*.jks
+keystore.properties
+google-services.json
+
+# ---- Android / Gradle build output and caches ----
+.gradle/
+.kotlin/
+build/
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+
+# ---- IDE ----
+.idea/
+*.iml
+
+# ---- Backend runtime data, virtualenv and caches ----
+backend/.venv/
+backend/data/
+__pycache__/
+.pytest_cache/
+*.sqlite3
+*.log
+
+# ---- OS ----
+.DS_Store

@@ -1,0 +1,446 @@
+<resources>
+    <string name="app_name">TapBack</string>
+
+    <!-- Navigation -->
+    <string name="tab_ask">Ask</string>
+    <string name="tab_learn">Learn</string>
+    <string name="settings">Settings</string>
+
+    <!-- Ask -->
+    <string name="show_me_how">Show me how</string>
+    <string name="ask_heading">What would you like help with?</string>
+    <string name="ask_placeholder">For example: make the text bigger</string>
+    <string name="ask_hint">Type it in your own words. TapBack will show you each step on your phone.</string>
+    <string name="request_field_description">Your request</string>
+
+    <!-- Learn -->
+    <string name="start_here">Start here</string>
+    <string name="continue_learning">Continue learning</string>
+    <string name="category_everyday">Everyday essentials</string>
+    <string name="category_connected">Stay connected</string>
+    <string name="category_photos">Photos &amp; creativity</string>
+    <string name="category_ai">AI tools</string>
+    <string name="category_yours">Make your phone yours</string>
+    <string name="category_all">All</string>
+    <string name="learn_search">Find a course</string>
+    <string name="learn_search_clear">Clear search</string>
+    <plurals name="learn_result_count">
+        <item quantity="one">%d course</item>
+        <item quantity="other">%d courses</item>
+    </plurals>
+    <string name="learn_results_for">%1$s for “%2$s”</string>
+    <string name="learn_empty_query">No courses match “%1$s”.</string>
+    <string name="learn_empty_category">No courses here yet.</string>
+    <string name="learn_empty_hint">Try another word, like photos, messages or maps.</string>
+    <string name="learn_empty_hint_category">Try another word, or look in All.</string>
+    <string name="learn_show_all">Show all courses</string>
+    <string name="learn_ask_instead">Ask Pebble instead</string>
+    <string name="learn_matched_lesson">Lesson: %1$s</string>
+    <string name="start_lesson">Start lesson</string>
+    <string name="resume_lesson">Resume</string>
+    <string name="review_lesson">Review lesson</string>
+    <string name="skip_lesson">Skip this lesson</string>
+    <string name="restart_lesson">Restart lesson</string>
+    <string name="restart_lesson_note_in_progress">Starts again from the beginning. Your place in this lesson won\'t be kept.</string>
+    <string name="restart_lesson_note_done">Practise it again. It stays finished.</string>
+    <string name="restart_course">Restart course</string>
+    <string name="restart_course_note">Practise every lesson again from the first. Finished lessons stay finished.</string>
+    <string name="back_to_learn">Back to Learn</string>
+    <string name="up_next">Up next</string>
+    <string name="lessons_heading">Lessons</string>
+    <string name="lesson_row_description">Lesson %1$d, %2$s</string>
+    <string name="lesson_status_done">Completed</string>
+    <string name="lesson_status_unavailable">Not available here</string>
+    <string name="lesson_status_skipped">Skipped</string>
+    <string name="lesson_status_in_progress">In progress</string>
+    <plurals name="lesson_count">
+        <item quantity="one">%d lesson</item>
+        <item quantity="other">%d lessons</item>
+    </plurals>
+    <plurals name="lessons_completed">
+        <item quantity="one">%1$d of %2$d lesson completed</item>
+        <item quantity="other">%1$d of %2$d lessons completed</item>
+    </plurals>
+    <plurals name="lessons_not_available">
+        <item quantity="one">%d not available here</item>
+        <item quantity="other">%d not available here</item>
+    </plurals>
+    <string name="next_lesson_meta">Next: %1$s</string>
+
+    <!-- Accessibility service -->
+    <string name="accessibility_service_label">TapBack</string>
+    <string name="accessibility_service_summary">Lets Pebble point at the right button while a guide is running.</string>
+    <string name="accessibility_service_description">TapBack needs accessibility access to read the names and positions of visible buttons while a guide is active. This lets Pebble point to the correct place on your screen. TapBack will not press buttons, enter text, or change settings for you.</string>
+
+    <!-- Prominent disclosure -->
+    <string name="disclosure_title">Before Pebble can show you</string>
+    <string name="disclosure_body">TapBack needs accessibility access to read the names and positions of visible buttons while a guide is active. This lets Pebble point to the correct place on your screen. TapBack will not press buttons, enter text, or change settings for you. The step-by-step guides work entirely on your device and share nothing. If you later ask TapBack for help with something it has no guide for, it will ask you separately before sending anything off the phone.</string>
+    <string name="disclosure_allow">Allow and continue</string>
+    <string name="disclosure_decline">Not now</string>
+
+    <!-- Turning the service on -->
+    <string name="enable_title">Turn on TapBack in Accessibility</string>
+    <string name="enable_body">The next screen is Android\'s Accessibility settings. Find <b>TapBack</b> under Downloaded apps, then turn it on. Come straight back and Pebble will carry on.</string>
+    <string name="enable_open_settings">Open Accessibility settings</string>
+    <string name="enable_not_now">Not now</string>
+
+    <!-- Returning with the service on -->
+    <string name="resume_title">Pebble is ready</string>
+    <string name="resume_body">Accessibility access is on. Shall we carry on with making the text bigger?</string>
+    <string name="resume_body_goal">Accessibility access is on. Shall we carry on with “%1$s”?</string>
+    <string name="resume_continue">Continue</string>
+    <string name="resume_cancel">Not now</string>
+
+    <!-- Limited mode -->
+    <string name="limited_title">Pebble can still help</string>
+    <string name="limited_body">Without accessibility access, Pebble cannot point at things on other screens. Here are the steps to follow yourself.</string>
+    <string name="limited_close">Close</string>
+    <string name="limited_step_1">Open Settings and tap Display.</string>
+    <string name="limited_step_2">Tap Display size and text.</string>
+    <string name="limited_step_3">Drag Font size to the right until the text looks right to you.</string>
+    <string name="unsupported_title">I can\'t guide that one yet</string>
+    <string name="unsupported_body">This version of TapBack knows one guide: making the text on your phone bigger. Ask for that and Pebble will show you.</string>
+
+    <!-- Guide, shared -->
+    <string name="guide_step_counter">Step %1$d of %2$d</string>
+    <string name="guide_pause">Pause</string>
+    <string name="guide_resume">Resume</string>
+    <string name="guide_exit">End guide</string>
+    <string name="guide_cannot_see">I don\'t see that</string>
+    <string name="guide_find_it">Find it for me</string>
+    <string name="guide_go_back">Go back a step</string>
+    <string name="guide_done">Done</string>
+    <string name="guide_done_adjusting">That looks right</string>
+    <string name="guide_opening_settings">Opening Settings…</string>
+    <string name="guide_looking">I\'m working out your next step. You can leave the screen as it is.</string>
+    <string name="guide_paused">Guide paused</string>
+    <string name="ai_paused_body">I have stopped looking at your screen. Nothing is being sent while we are paused.</string>
+    <string name="guide_finished">That\'s it. Your text is bigger now.</string>
+    <string name="guide_left_settings">Pebble is waiting in Settings</string>
+    <string name="guide_open_settings">Open Settings</string>
+    <string name="guide_scroll_down">Scroll down a little</string>
+    <string name="guide_scroll_up">Scroll up a little</string>
+    <string name="guide_recovery_title">Not on this screen?</string>
+    <string name="guide_recovery_generic">Check you are on the right screen, then try again.</string>
+
+    <!-- Guide, step wording -->
+    <string name="guide_step_tap">Tap %1$s.</string>
+    <string name="guide_step_tap_next">Now tap %1$s.</string>
+    <string name="guide_step_drag">Drag %1$s to the right until the text looks right to you.</string>
+
+    <!-- Flagship guide: make the text bigger -->
+    <string name="guide_text_size_title">Make the text bigger</string>
+    <string name="guide_text_size_step1_target">Display</string>
+    <string name="guide_text_size_step1_fallback">On some phones this row is called Display &amp; touch. Scroll down a little if you cannot see it.</string>
+    <string name="guide_text_size_step2_target">Display size and text</string>
+    <string name="guide_text_size_step2_fallback">On some phones it is called Font size. Scroll down a little, or check you are on the Display screen.</string>
+    <string name="guide_text_size_step3_target">Font size</string>
+    <string name="guide_text_size_step3_fallback">Look for a slider labelled Font size or Text size. Scroll down a little if you cannot see it.</string>
+
+    <!-- Experimental visual tracking -->
+    <string name="projection_channel_name">Screen viewing during a guide</string>
+    <string name="projection_channel_description">Shown while Pebble is using the screen to stay aligned.</string>
+    <string name="projection_notification_title">Pebble is watching the screen</string>
+    <string name="projection_notification_text">Only while this guide is running. Nothing is saved or shared.</string>
+
+    <string name="visual_disclosure_title">Let Pebble see the screen?</string>
+    <string name="visual_disclosure_body">To keep Pebble aligned while you scroll, TapBack can temporarily view your screen during this guide. Frames are processed only on this device and are never saved or shared.</string>
+    <string name="visual_disclosure_allow">Allow for this guide</string>
+    <string name="visual_disclosure_decline">Continue without visual tracking</string>
+
+    <!-- Shown while the page is moving. One short line each; the card carries
+         one of these at a time and crossfades between them. -->
+    <string name="guide_keep_scrolling_down">Scroll down a little</string>
+    <string name="guide_scroll_up_to_it">Scroll up a little</string>
+    <string name="guide_stop_here">Stop here</string>
+    <string name="guide_stop_for_a_moment">Pause for a moment so I can find it</string>
+
+    <!-- A general, AI-guided session. Short words on overlay buttons. -->
+    <string name="ai_continue">I\'m done</string>
+    <string name="ai_try_again">Try again</string>
+    <string name="ai_answer">Answer</string>
+    <string name="ai_finish">Finish</string>
+    <string name="ai_helping">HELPING YOU</string>
+    <string name="ai_looking">I\'m working out your next step. You can leave the screen as it is.</string>
+    <string name="ai_thinking">I\'m working out your next step. You can leave the screen as it is.</string>
+    <string name="ai_waiting_download">The app is downloading. You can leave this screen; I\'ll check again when you come back.</string>
+    <string name="ai_thinking_slow">I\'m still working out your next step. You can wait, or tap Try again.</string>
+    <string name="ai_reconnecting_offline">Your phone seems to be offline, so I\'ll try again in a moment. Your place is saved.</string>
+    <string name="ai_reconnecting_service">TapBack\'s guidance service isn\'t answering, so I\'ll try again in a moment. You don\'t need to do anything.</string>
+    <string name="ai_reconnecting_slow">That\'s taking longer than usual, so I\'m asking again. You don\'t need to do anything.</string>
+    <string name="ai_reconnecting_pacing">I\'m pacing my requests, so I\'ll carry on in a moment. You don\'t need to do anything.</string>
+    <string name="ai_reconnecting_busy">The AI service is busy, so I\'ll try again in a moment. You don\'t need to do anything.</string>
+    <string name="ai_reconnecting_unusable">I got an answer I couldn\'t use, so I\'m asking again. You don\'t need to do anything.</string>
+    <string name="ai_reconnecting">I\'m having trouble reaching guidance, so I\'m trying again. You don\'t need to do anything.</string>
+    <string name="ai_hold_still">Pause scrolling for a moment so I can see this screen.</string>
+    <string name="ai_change_answer">Change answer</string>
+    <string name="ai_private_screen">This looks private, so I\'ve stopped looking. %1$s</string>
+    <string name="ai_did_not_work">That didn\'t work</string>
+    <string name="ai_move_card">Move guide</string>
+    <string name="card_blocked_keyboard">There isn’t room for me beside the keyboard here.</string>
+    <string name="card_blocked_scroll">There isn’t a clear spot for me on this screen.</string>
+    <string name="card_blocked_move">Drag the handle or tap Move guide to put me where you like.</string>
+    <string name="ai_try_later">Try again later</string>
+    <string name="ai_check_again">Check again</string>
+    <string name="ai_reacquiring">The screen is still changing, so I\'m taking another look. Wait a moment.</string>
+    <string name="ai_cannot_read">I can’t see the buttons on this screen. I’ll keep watching and carry on as soon as I can.</string>
+    <string name="ai_cannot_read_still">I still can’t see the buttons on this screen. You can carry on yourself; your progress is saved.</string>
+    <string name="ai_permission_location">Android is asking about location. Choose what you’re comfortable with; I’ll carry on after.</string>
+    <string name="ai_permission_other">Android is asking you to allow something. Choose what you’re comfortable with; I’ll carry on after.</string>
+    <string name="ai_protected_window">This window keeps its buttons private. Finish this part there; I’ll carry on after.</string>
+    <string name="ai_system_dialog">Your phone is asking you something. Choose what you prefer, and I\'ll carry on after.</string>
+    <string name="ai_not_allowed_to_look">To guide you, TapBack needs your OK to look at the screen. Open TapBack to allow it.</string>
+    <string name="ai_answer_send">Send answer</string>
+    <string name="ai_answer_field">Your answer</string>
+    <string name="ai_answer_personal_note">What you type here goes to TapBack\'s guide, only to help with this. You can type it in the app instead.</string>
+    <string name="ai_keep_trying">Keep trying</string>
+    <string name="ai_stalled_unknown">We haven\'t been able to finish this step. Your progress is saved.</string>
+    <string name="ai_stalled_app">%1$s isn\'t opening right now. Your progress is saved.</string>
+    <string name="ai_stalled_observed">%1$s Your progress is saved.</string>
+    <string name="ai_stalled_app_error">%1$s Let\'s try again later — your place is saved.</string>
+    <string name="lesson_next">Next lesson</string>
+    <string name="replace_guide_title">Start something new?</string>
+    <string name="replace_guide_body">You\'re in the middle of “%1$s”. If you start “%2$s” now, your place in “%1$s” is saved so you can come back to it.</string>
+    <string name="replace_guide_start">Start “%1$s”</string>
+    <string name="replace_guide_keep">Keep going where I was</string>
+    <string name="lesson_unavailable">%1$s I\'ve noted that this lesson isn\'t available here for now.</string>
+    <string name="lesson_finish_for_now">Finish for now</string>
+    <string name="teach_label">LESSON</string>
+    <string name="teach_begin">Let\'s begin</string>
+    <string name="teach_show_me_how">Show me how</string>
+    <string name="teach_next">Next</string>
+    <string name="lesson_review_course">Review the course</string>
+    <string name="celebrate_lesson_headline">You finished “%1$s”!</string>
+    <string name="celebrate_lesson_next">Next: %1$s</string>
+    <plurals name="celebrate_progress">
+        <item quantity="one">%1$d of %2$d lesson completed</item>
+        <item quantity="other">%1$d of %2$d lessons completed</item>
+    </plurals>
+    <string name="celebrate_course_headline">You completed %1$s.</string>
+    <string name="celebrate_course_detail">You can now %1$s</string>
+    <string name="celebrate_course_wrapup">That\'s the last lesson for now.</string>
+    <plurals name="celebrate_course_wrapup_detail">
+        <item quantity="one">%1$d of %2$d lesson is done. The others were skipped or aren\'t available on this phone.</item>
+        <item quantity="other">%1$d of %2$d lessons are done. The others were skipped or aren\'t available on this phone.</item>
+    </plurals>
+    <string name="celebrate_task_headline">Done!</string>
+    <string name="lesson_choose_another">Choose another lesson</string>
+    <string name="ai_sign_in_label">SIGNING IN</string>
+    <string name="ai_done_typing">I\'ve finished typing</string>
+    <string name="ai_try_another_way">Try another way</string>
+    <string name="ai_keep_waiting">Keep waiting</string>
+    <string name="ai_waiting">WAITING</string>
+    <string name="ai_waiting_app">%1$s Wait for it to finish.</string>
+    <string name="ai_still_waiting">This is still going: %1$s Would you like to keep waiting?</string>
+    <string name="ai_blocked">%1$s %2$s</string>
+
+    <!-- The second disclosure: screen content leaving the phone. -->
+    <string name="cloud_disclosure_title">TapBack needs to send part of your screen</string>
+    <string name="cloud_disclosure_body">To help with “%1$s”, TapBack sends what is on your screen — the words on the buttons, and sometimes a picture of the screen — to a service that works out what to suggest next. TapBack\'s service does not store it. The AI provider, Google Gemini, handles it under its own terms.</string>
+    <string name="cloud_disclosure_not_sent">TapBack stops looking on any screen asking for a password, a security code or payment details. On those you carry on yourself and tell TapBack when you are through. TapBack never taps, types or scrolls for you.</string>
+    <string name="cloud_disclosure_allow">Allow and continue</string>
+    <string name="no_planning_service_title">This copy of TapBack cannot ask for help</string>
+    <string name="no_planning_service_body">It was built without a planning service to ask. The step-by-step guides still work.</string>
+    <string name="resume_offer_title">Carry on where you left off?</string>
+    <string name="resume_offer_body">Last time you asked: “%1$s”. TapBack will look at your screen again and pick up from there.</string>
+    <string name="resume_offer_continue">Carry on</string>
+    <string name="resume_offer_discard">Start again</string>
+    <string name="question_title">One quick question</string>
+    <string name="question_send">Send</string>
+
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_back">Back</string>
+    <string name="settings_guidance_heading">Guidance access</string>
+    <string name="settings_guidance_on">On. Pebble can guide you in other apps.</string>
+    <string name="settings_guidance_off">Off. Learn works, but Pebble can\'t point at things in other apps until you turn on TapBack.</string>
+    <string name="settings_guidance_open">Open Accessibility settings</string>
+    <string name="settings_guidance_turn_off_help">To turn it off, open Accessibility settings, tap TapBack, and switch it off.</string>
+    <string name="settings_cloud_heading">Help from the AI service</string>
+    <string name="settings_cloud_on">Allowed. While a guide runs, TapBack sends button words and sometimes a picture of the screen to plan each step.</string>
+    <string name="settings_cloud_off">Not allowed. TapBack will ask before sending anything off your phone.</string>
+    <string name="settings_cloud_withdraw">Stop allowing this</string>
+    <string name="settings_plan_heading">Your plan</string>
+    <string name="settings_intro_heading">Introduction</string>
+    <string name="settings_intro_replay">Replay introduction</string>
+    <string name="settings_privacy_heading">Privacy</string>
+    <string name="settings_privacy_body">TapBack reads the screen only while a guide is running. To plan each step it sends the words on buttons, and sometimes a picture of the screen, to TapBack\'s service and Google Gemini; TapBack\'s service doesn\'t keep them. On password, code and payment screens TapBack stops looking. TapBack never taps, types or scrolls for you, and screenshots are never saved on your phone.</string>
+    <string name="settings_version">Version %1$s</string>
+
+    <!-- Dot Plus -->
+    <string name="plus_next_free">Your next free guided task arrives on %1$s.</string>
+    <string name="plus_free_weekly_ready">You have a free guided task ready.</string>
+    <string name="plus_free_used">You’ve used your free guided tasks. The free course is still yours.</string>
+    <string name="plus_status_preview">TapBack Plus preview until %1$s. This isn’t a purchase, and it ends by itself.</string>
+    <string name="plus_test_store">Test purchase: RevenueCat\'s Test Store, no real money is charged.</string>
+    <string name="plus_try_again">Try again</string>
+    <string name="plus_not_now">Not now</string>
+    <string name="plus_manage">Manage subscription</string>
+    <string name="plus_see">See TapBack Plus</string>
+    <string name="plus_status_free">Free plan.</string>
+    <string name="plus_status_unknown">Couldn\'t check your plan just now.</string>
+    <string name="plus_tag">TapBack Plus</string>
+    <string name="plus_locked_course_note">This course is part of TapBack Plus. Your progress is kept.</string>
+    <string name="admitting">Getting your guide ready…</string>
+    <string name="admission_failed_title">Couldn\'t start that just now</string>
+    <plurals name="plus_free_left">
+        <item quantity="one">You have %1$d free guided task left.</item>
+        <item quantity="other">You have %1$d free guided tasks left.</item>
+    </plurals>
+    <plurals name="plus_active_until">
+        <item quantity="one">TapBack Plus: %1$d of %2$d guided tasks left this week. Renews %3$s.</item>
+        <item quantity="other">TapBack Plus: %1$d of %2$d guided tasks left this week. Renews %3$s.</item>
+    </plurals>
+    <plurals name="plus_active_ends">
+        <item quantity="one">TapBack Plus: %1$d of %2$d guided tasks left this week. Ends %3$s; it won\'t renew.</item>
+        <item quantity="other">TapBack Plus: %1$d of %2$d guided tasks left this week. Ends %3$s; it won\'t renew.</item>
+    </plurals>
+
+    <!-- First-run introduction (approved design) -->
+    <string name="onb_back">Back</string>
+    <string name="onb_meet_title">A little help with your phone.</string>
+    <string name="onb_meet_body">Pebble shows you what to do, one step at a time.</string>
+    <string name="onb_meet_action">Meet Pebble</string>
+    <string name="onb_try_title">When Pebble highlights something, that’s where to tap.</string>
+    <string name="onb_practice">Practice</string>
+    <string name="onb_try_button">Try tapping here</string>
+    <string name="onb_try_hint">Tap the highlighted button to try it.</string>
+    <string name="onb_try_done">Nicely done</string>
+    <string name="onb_try_after">That’s all there is to it. Pebble points — you tap.</string>
+    <string name="onb_continue">Continue</string>
+    <string name="onb_enable_title">Let Pebble guide you.</string>
+    <string name="onb_enable_body">TapBack needs Android accessibility access to find items on your screen and show guidance.</string>
+    <string name="onb_enable_tap_title">You do the tapping.</string>
+    <string name="onb_enable_tap_body">Pebble only shows you where.</string>
+    <string name="onb_enable_screen_title">About your screen.</string>
+    <string name="onb_enable_screen_body">During guidance, what’s on your screen is sent to TapBack’s service and Google’s Gemini AI to work out the next step.</string>
+    <string name="onb_enable_private_title">Private screens.</string>
+    <string name="onb_enable_private_body">On password, code and payment screens, TapBack stops looking. You can pause any time.</string>
+    <string name="onb_choose">What you’ll choose</string>
+    <string name="onb_choose_tag">Preview</string>
+    <string name="onb_choose_1">Accessibility</string>
+    <string name="onb_choose_2">TapBack</string>
+    <string name="onb_choose_3">Use TapBack</string>
+    <string name="onb_choose_note">Then tap **Allow**. Android’s message lists everything a helper app could do; TapBack only reads your screen while a guide runs, and never taps for you.</string>
+    <string name="onb_open_settings">Open Android settings</string>
+    <string name="onb_explore_first">Explore first</string>
+    <string name="onb_on_title">Guidance is on.</string>
+    <string name="onb_on_body">Pebble can now show you where to tap in your other apps. You can turn this off any time in Android Settings.</string>
+    <string name="onb_on_chip">Accessibility access is on</string>
+    <string name="onb_off_title">Guidance isn’t on yet.</string>
+    <string name="onb_off_body">That’s okay. In Android Settings, open **Accessibility**, choose **TapBack**, then turn on **Use TapBack**.</string>
+    <string name="onb_no_settings">This phone didn’t open Accessibility settings. You can turn on TapBack there yourself later.</string>
+    <string name="onb_ready_title">You’re ready.</string>
+    <string name="onb_ready_later">You can turn on guidance later in Settings.</string>
+    <string name="onb_get_started">Get started</string>
+    <string name="onb_ready_note">Start with free help. Upgrade whenever you like.</string>
+
+    <!-- TapBack Plus paywall, as the approved boards have it. Prices, periods and dates come from the store and TapBack's service. -->
+    <string name="pw_close">Close</string>
+    <string name="pw_eyebrow_course">This course is part of TapBack Plus</string>
+    <string name="pw_eyebrow_used">You’ve used your free guided tasks</string>
+    <string name="pw_title">A little more help, whenever you need it.</string>
+    <plurals name="pw_benefit_tasks">
+        <item quantity="one">%d guided task each week</item>
+        <item quantity="other">%d guided tasks each week</item>
+    </plurals>
+    <string name="pw_benefit_courses">Every step-by-step course</string>
+    <string name="pw_task_note">One task includes the steps and follow-up help to finish it.</string>
+    <string name="pw_included">What’s included?</string>
+    <string name="pw_free">Free</string>
+    <string name="pw_free_tasks">2 guided tasks to try TapBack</string>
+    <string name="pw_free_course">The %1$s course</string>
+    <string name="pw_plus">TapBack Plus</string>
+    <string name="pw_payment_note">Payment is handled by Google Play. You can cancel anytime in Google Play.</string>
+    <string name="pw_payment_note_test">This test build buys through RevenueCat’s Test Store. Nothing is charged.</string>
+    <string name="pw_price">%1$s / %2$s</string>
+    <plurals name="pw_unit_week">
+        <item quantity="one">week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="pw_unit_month">
+        <item quantity="one">month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="pw_unit_year">
+        <item quantity="one">year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+    <plurals name="pw_unit_day">
+        <item quantity="one">day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <string name="pw_adverb_week">weekly</string>
+    <string name="pw_adverb_month">monthly</string>
+    <string name="pw_adverb_year">yearly</string>
+    <string name="pw_adverb_day">daily</string>
+    <string name="pw_adverb_every">every %1$s</string>
+    <string name="pw_renews">Renews %1$s. Cancel anytime.</string>
+    <string name="pw_price_loading">Checking the price…</string>
+    <string name="pw_price_unavailable">The price isn’t available right now.</string>
+    <string name="pw_test_tag">Test Store · no charge</string>
+    <string name="pw_get">Get TapBack Plus</string>
+    <string name="pw_continue_free">Continue free</string>
+    <string name="pw_not_now">Not now</string>
+    <string name="pw_next_free">Your next free task: **%1$s**</string>
+    <string name="pw_restore">Restore purchases</string>
+    <string name="pw_terms">Terms</string>
+    <string name="pw_privacy">Privacy</string>
+    <string name="pw_cancelled">Purchase cancelled. You haven’t been charged.</string>
+    <string name="pw_pending">Your payment is pending. TapBack Plus starts once Google Play confirms it.</string>
+    <string name="pw_failed">The purchase didn’t go through. You haven’t been charged.</string>
+    <string name="pw_failed_simulated">The Test Store simulated a failed purchase. Nothing was charged.</string>
+    <string name="pw_dismiss">Dismiss</string>
+    <string name="pw_waiting">Waiting for Google Play…</string>
+    <string name="pw_waiting_test">Waiting for the Test Store…</string>
+    <string name="pw_waiting_body">This usually takes a few seconds.</string>
+    <string name="pw_restoring">Checking Google Play…</string>
+    <string name="pw_restoring_test">Checking the Test Store…</string>
+    <string name="pw_restoring_body">Looking for an earlier purchase.</string>
+    <string name="pw_unavailable_title">Purchases aren’t available right now</string>
+    <string name="pw_unavailable_body">Check that your phone is connected to the internet and signed in to Google Play, then try again.</string>
+    <string name="pw_unavailable_offering">TapBack Plus can’t be bought just now. Please try again later.</string>
+    <string name="pw_not_configured_title">TapBack Plus isn’t available in this version</string>
+    <string name="pw_not_configured_body">This copy of TapBack can’t sell subscriptions. Your free tasks and the free course still work.</string>
+    <string name="pw_try_again">Try again</string>
+    <string name="pw_ok">OK</string>
+    <string name="pw_done">Done</string>
+    <string name="pw_restored_title">TapBack Plus restored</string>
+    <string name="pw_restored_body">Your subscription is active on this phone.</string>
+    <string name="pw_none_title">No purchase found</string>
+    <string name="pw_none_body">Make sure you’re signed in to Google Play with the account you used to subscribe.</string>
+    <string name="pw_none_body_test">No Test Store purchase was found for this install.</string>
+    <string name="pw_unconfirmed_title">Almost there</string>
+    <string name="pw_unconfirmed_body">Google Play has your purchase, but TapBack couldn’t confirm it yet. Checking again won’t charge you twice.</string>
+    <string name="pw_check_again">Check again</string>
+    <string name="pw_success_title">You’re on TapBack Plus.</string>
+    <plurals name="pw_success_body">
+        <item quantity="one">%d guided task each week and every course are ready for you.</item>
+        <item quantity="other">%d guided tasks each week and every course are ready for you.</item>
+    </plurals>
+    <string name="pw_success_note">Renews %1$s at %2$s. You can cancel anytime in Google Play.</string>
+    <string name="pw_success_note_test">A Test Store purchase: nothing was charged.</string>
+    <string name="pw_active_renews">Renews on %1$s. You can cancel anytime in Google Play.</string>
+    <string name="pw_active_ends">Stays on until %1$s.</string>
+    <string name="pw_plus_used_title">You’ve used this week’s guided tasks.</string>
+    <string name="pw_plus_used_body">More arrive when TapBack Plus renews on %1$s.</string>
+    <string name="pw_plus_used_body_plain">More arrive when your next TapBack Plus week begins.</string>
+
+    <!-- The invitation after the first guided task. -->
+    <string name="inv_eyebrow">Task complete</string>
+    <string name="inv_title">All done.</string>
+    <string name="inv_generic">Pebble helped you finish your first task.</string>
+    <string name="inv_card_title">Want a little more help each week?</string>
+    <plurals name="inv_card_body">
+        <item quantity="one">TapBack Plus gives you %d guided task each week and every course.</item>
+        <item quantity="other">TapBack Plus gives you %d guided tasks each week and every course.</item>
+    </plurals>
+    <string name="inv_explore">Explore Plus</string>
+    <string name="inv_keep_free">Keep using free</string>
+
+    <!-- Terms of Service and Privacy Policy, in the app. -->
+    <string name="legal_terms_title">Terms of Service</string>
+    <string name="legal_privacy_title">Privacy Policy</string>
+    <string name="legal_back">Back</string>
+</resources>

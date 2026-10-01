@@ -1,0 +1,19 @@
+# Copy to local.properties (gitignored) and fill in. Placeholders only.
+# Android Studio adds sdk.dir itself; set it by hand only if you build from the command line.
+# sdk.dir=/path/to/Android/sdk
+
+# ---- Debug build: the local TapBack backend ----
+# The emulator reaches your computer's loopback at 10.0.2.2.
+# On a physical phone: adb reverse tcp:8000 tcp:8000, then http://127.0.0.1:8000
+dot.backend.url=http://10.0.2.2:8000
+# The same value as DOT_CLIENT_TOKEN in backend/.env
+dot.backend.token=replace-with-your-DOT_CLIENT_TOKEN
+
+# ---- Debug build: RevenueCat Test Store public SDK key (starts test_) ----
+revenuecat.test.key=test_REPLACE_ME
+
+# ---- Release build only ----
+# A hosted TapBack backend over HTTPS (run with DOT_INSTALL_AUTH=1)
+# tapback.release.backend.url=https://your-backend.example.com
+# RevenueCat Google Play public SDK key (starts goog_)
+# revenuecat.google.key=goog_REPLACE_ME
